@@ -1,0 +1,115 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+
+  "parameters": {
+    "name": {
+      "value": "glob123"
+    },
+
+    "location": {
+      "value": "EastUS"
+    },
+
+    "objectId": {
+      "value": "37f81100-b3ae-4313-bcc0-47a8ff0a3b77"
+    },
+
+    "tenantId": {
+      "value": "c160a942-c869-429f-8a96-f8c8296d57db" 
+    },
+
+    "enabledForDeployment": {
+      "value": false
+    },
+
+  "enabledForDiskEncryption": {
+      "value": false
+    },
+
+  "enabledForTemplateDeployment": {
+      "value": false
+    },
+
+  "keysPermissions": {
+      "value": [
+        "Get",
+        "List",
+        "create",
+        "encrypt"             
+      ]
+    },
+  "secretsPermissions": {
+      "value": [
+        "Get",
+        "List",
+        "Set"
+      ]
+   },
+  "secretsObject": {
+      "value": {
+        "secrets": [
+          {
+            "secretName": "psrconsumerGrpName",
+            "secretValue": "cntnr-2.0.0"
+          },
+          {
+            "secretName": "psreventHubnamespace",
+            "secretValue": "dataq-ts-eh-psr"
+          },
+          {
+            "secretName": "psrSASName",
+            "secretValue": "ListenPolicy"
+          },
+          {
+            "secretName": "psrSASKey",
+            "secretValue": "null"
+          },
+          {
+            "secretName": "storageAccountName",
+            "secretValue": "dataqtssa"
+          },
+          {
+            "secretName": "null",
+            "secretValue": "dataqjava"
+          },
+          {
+            "secretName": "rawSamplesEventHubName",
+            "secretValue": "timeseries-eh-rawsample"
+          },
+          {
+            "secretName": "rawSamplesEventHubnamespace",
+            "secretValue": "dataq-ts-eh-rawsamples"
+          },
+          {
+            "secretName": "rawSamplesSASName",
+            "secretValue": "SendPolicy"
+          },
+          {
+            "secretName": "rawSamplesSASKey",
+            "secretValue": "null"
+          },
+          {
+            "secretName": "psrStatusEventHubName",
+            "secretValue": "timeseries-eh-psrstatus"
+          },
+          {
+            "secretName": "psrStatusEventHubnamespace",
+            "secretValue": "dataq-ts-eh-status"
+          },
+          {
+            "secretName": "psrStatusSASName",
+            "secretValue": "SendPolicy"
+          },
+          {
+            "secretName": "psrStatusSASKey",
+            "secretValue": "null"
+          }
+        ]
+      }
+    },
+     "skuName": {
+        "value": "Standard"
+    }
+  }
+}
